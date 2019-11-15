@@ -3,6 +3,15 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .movie-card {
@@ -61,7 +70,26 @@ body {
   padding: 5px 10px;
   background-color: lightseagreen;
 }
-.save-button:hover {
+
+.edit-button {
+  position: absolute;
+  top: 110px;
+  right: 25px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightseagreen;
+}
+
+.delete-button {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightseagreen;
+}
+
+.save-button:hover, .edit-button:hover, .delete-button:hover {
   background-color: green;
   color: white;
 }
@@ -74,4 +102,22 @@ body {
 .movie-warning {
   color: red;
   text-align: center;
+}
+
+.updateContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
+  margin-left: 40%;
+}
+
+
+form input, form button {
+  margin: 10px;
 }
